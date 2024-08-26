@@ -1,0 +1,2 @@
+Streams allow you to start using data before it has finished loading
+Helps with very large files, instead of waiting to read/retrieve the whole file
