@@ -1,0 +1,14 @@
+client types up a domain name, server sends back a response 
+domain name is masking an ip address, the address of a computer providing the resources
+server will take the request and send a response, usually a html page
+could send back json, css, or other files
+
+searching up domain name deals with GET http method / GET request
+Communication via HTTP  
+
+localhost is a loopback ip address, similar to a domain name on the web
+localhost points to 127.0.0.1 which points to our own computer
+allows us to use computer as a host when developing web apps
+
+Port numbers: 
+similar to 'doors' into a computer
