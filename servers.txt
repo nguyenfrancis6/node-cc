@@ -12,3 +12,20 @@ allows us to use computer as a host when developing web apps
 
 Port numbers: 
 similar to 'doors' into a computer
+
+Returning html pages is better by making the html pages separately from node code, 
+using a switch statement to check for routes and adding corresponding pages
+can check routes by using the request's url property and adding it to the 
+path to your html files
+
+Also, setting statuscodes for your response to signify the results
+100 range is informational
+200 is usually success
+300 is redirect
+400s is a problem on client
+500 is internal server error
+
+common ones are 200, 301, 404, 500
+
+to redirect, set code to 301
+set the header to location and set the route to whichever page is desired
