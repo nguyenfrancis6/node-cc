@@ -1,0 +1,14 @@
+npm used to install external libraries or frameworks or utility
+
+-g installs things globally meaning you can use it in other projects
+however, most of the time, installing locally is recommended
+
+installed nodemon, used so you dont have to restart server after making
+changes to file
+
+package.json file will have dependencies
+
+node_modules file usually not in github repos, just need package.json 
+and do npm install or npm i to install all the dependencies/external tools
+
+thats how dependencies are shared/how other developers use the same ones
