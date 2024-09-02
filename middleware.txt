@@ -1,0 +1,14 @@
+middleware is code which runs on the server between getting a request and sending
+a response
+
+any code or function that runs in between the request and response
+
+app.use and app.get is an example of middleware
+middleware runs top to bottom
+
+middleware examples:
+logger middleware to log details of every request
+authentication check middleware for protected routes
+middleware to parse JSON data from requests
+Return 404 pages 
+

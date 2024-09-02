@@ -1,4 +1,5 @@
 const express = require("express");
+const morgan = require('morgan')
 
 // express app
 const app = express();
@@ -10,6 +11,21 @@ app.set('view engine', 'ejs');
 // listen for requests, automatically infers localhost
 app.listen(3000);
 
+// middleware & static files
+app.use(express.static('public')); // now styles.css is able to be used in public folder
+app.use(morgan('dev'));
+
+// next allows node to continue running the code after .use
+app.use((req, res, next) => {
+  console.log(req.hostname, req.path, req.method);
+  next();
+})
+
+app.use((req, res, next) => {
+  console.log('in the next middleware');
+  next();
+})
+
 app.get("/", (req, res) => {
   const blogs = [
     {title: 'Yoshi finds eggs', snippet: 'Lorem ipsum dolor sit amet consectetur'},
@@ -20,6 +36,7 @@ app.get("/", (req, res) => {
   // res.sendFile('./views/index.html', { root: __dirname }); //express uses absolute path, can set root to current directory using __dirname
   res.render('index', { title: 'Home', blogs: blogs});
 });
+
 
 app.get("/about", (req, res) => {
  // res.send("<p>about page</p>");
