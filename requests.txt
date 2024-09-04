@@ -1,0 +1,10 @@
+GET request to get a resource
+POST requests to create new data
+DELETE requests to delete data
+PUT requests to update data
+
+route parameters are variable parts of the route that may change value
+
+/blogs/5
+/blogs/2083
+/blogs/hello
